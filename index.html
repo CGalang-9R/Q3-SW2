@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- B5 SETUP -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+	<!-- JS SETUP -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+	<!-- CSS SETUP -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- FONT -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+
+	<title>Seatwork 2</title>
+
+	<!-- SCRIPT -->
+	<script type="text/javascript">
+		function modulo() {
+		    var x = parseFloat(document.getElementById('id_X').value);
+		    var y = parseFloat(document.getElementById('id_Y').value);
+		    var modulo = x%y;
+		    var round_modulo = modulo.toFixed(2);
+
+		    window.alert('The modulo is ' + round_modulo);
+		}
+
+		function exponent() {
+		    var x = parseFloat(document.getElementById('id_X').value);
+		    var y = parseFloat(document.getElementById('id_Y').value);
+		    var exponent = Math.pow(x, y);  // Alternative: x ** y
+		    var round_exponent = exponent.toFixed(2);
+
+		    window.alert('The exponent is ' + round_exponent);
+		}
+
+		function greater() {
+		    var x = parseFloat(document.getElementById('id_X').value);
+		    var y = parseFloat(document.getElementById('id_Y').value);
+
+		    window.alert(x + " greater than " + y + "? Answer: " + (x > y));
+		}
+
+		function less() {
+		    var x = parseFloat(document.getElementById('id_X').value);
+		    var y = parseFloat(document.getElementById('id_Y').value);
+
+		    window.alert(x + " less than " + y + "? Answer: " + (x < y));
+		}
+	</script>
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-5 mt-3 mb-3">
+				<img src="https://i.pinimg.com/originals/4b/06/e3/4b06e393fd0647c265b1282b0f006486.gif">
+			</div>
+
+			<div class="col-md-7 mt-3 mb-3">
+				<h3>Hey, I'm Annie! Let's do some math together.</h3>
+				<hr>
+
+				<h4>Given</h4>
+				<form>
+					<label>Enter value for <kbd>x</kbd></label>
+					<input type="number" id="id_X" class="form-control">
+					<br>
+
+					<label>Enter value for <kbd>y</kbd></label>
+					<input type="number" id="id_Y" class="form-control">
+				</form>
+			</div>
+
+		</div>
+
+		<!-- Buttons -->
+		<div class="container2">
+			<button type="button" onclick="modulo()" class="btn btn-light">Modulo of x and y</button>
+
+			<button type="button" onclick="exponent()" class="btn btn-light">Exponent of x and y</button>
+
+			<button type="button" onclick="greater()" class="btn btn-light">Is x greater than y?</button>
+
+			<button type="button" onclick="less()" class="btn btn-light">Is x less than y?</button>
+		</div>
+
+	</div>
+
+	<div class="footer">
+		<h4><a href="https://cgalang-9r.github.io/Q2EX2-Profile/">Charlize Galang | 9-Ruby</a></h4>
+	</div>
+
+</body>
+</html>
